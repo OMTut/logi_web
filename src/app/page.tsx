@@ -4,92 +4,129 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      {/* Header */}
+      <header className={styles.header}>
+        <div className={styles.container}>
+          <div className={styles.logo}>
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/Logo_Logi_v1_desktop.png"
+              alt="Logi - Star Citizen Kill Tracker"
+              width={200}
+              height={60}
+              className={styles.logoImage}
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+            <h1 className={styles.logoText}>Logi</h1>
+          </div>
+          <nav className={styles.nav}>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+          </nav>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </header>
+
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.container}>
+          <div className={styles.heroContent}>
+            <div className={styles.heroText}>
+              <h2>Real-time Kill Tracker for Star Citizen</h2>
+              <p>
+                Monitor PvP and PvE combat events with Logi's always-on-top overlay. 
+                Track actor deaths, combat statistics, and enhance your Star Citizen gameplay experience.
+              </p>
+              <div className={styles.heroButtons}>
+                <a 
+                  href="https://github.com/OMTut/Logi/releases/latest/download/LogiSetup.exe"
+                  className={styles.downloadBtn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download v1.0.1
+                </a>
+                <a 
+                  href="https://github.com/OMTut/Logi/releases"
+                  className={styles.secondaryBtn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Releases
+                </a>
+              </div>
+              <p className={styles.requirements}>Windows 10/11 • ~60MB • Free</p>
+            </div>
+            <div className={styles.heroImage}>
+              <div className={styles.screenshot}>
+                <p>App Screenshot</p>
+                <small>(Screenshot placeholder - add your Logi overlay image)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className={styles.features}>
+        <div className={styles.container}>
+          <h2>Key Features</h2>
+          <div className={styles.featuresGrid}>
+            <div className={styles.feature}>
+              <h3>🎯 Real-time Log Monitoring</h3>
+              <p>Automatically detects and parses Star Citizen log files for instant combat tracking.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>💀 Actor Death Tracking</h3>
+              <p>Monitor and display actor death events in real-time during PvP and PvE encounters.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>👁️ Always-on-top Overlay</h3>
+              <p>Transparent overlay interface that stays visible during gameplay without interruption.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>🚀 Game Process Detection</h3>
+              <p>Automatically starts monitoring when Star Citizen is running - no manual activation needed.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>🔄 Automatic Updates</h3>
+              <p>Built-in update system keeps you current with the latest features and improvements.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>⚡ Lightweight & Fast</h3>
+              <p>Minimal system impact with approximately 60MB disk space requirement.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className={styles.contact}>
+        <div className={styles.container}>
+          <h2>Get in Touch</h2>
+          <div className={styles.contactContent}>
+            <div className={styles.contactText}>
+              <p>Questions, feedback, or need support? Reach out to us!</p>
+              <div className={styles.contactLinks}>
+                <a 
+                  href="https://github.com/OMTut/Logi/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contactLink}
+                >
+                  🐛 Report Issues
+                </a>
+                <a 
+                  href="https://github.com/OMTut/Logi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contactLink}
+                >
+                  💻 View Source
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
