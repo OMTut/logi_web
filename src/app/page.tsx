@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useLatestRelease } from "@/hooks/useLatestRelease";
+import FAQ from "@/components/FAQ";
+import Troubleshooting from "@/components/Troubleshooting";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -27,6 +29,8 @@ export default function Home() {
           </div>
           <nav className={styles.nav}>
             <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+            <a href="#troubleshooting">Troubleshooting</a>
             <a href="#contact">Contact</a>
           </nav>
         </div>
@@ -82,32 +86,38 @@ export default function Home() {
           <h2>Key Features</h2>
           <div className={styles.featuresGrid}>
             <div className={styles.feature}>
-              <h3>🎯 Real-time Log Monitoring</h3>
+              <h3>Real-time Log Monitoring</h3>
               <p>Automatically detects and parses Star Citizen log files for instant combat tracking.</p>
             </div>
             <div className={styles.feature}>
-              <h3>💀 Actor Death Tracking</h3>
+              <h3>Actor Death Tracking</h3>
               <p>Monitor and display actor death events in real-time during PvP and PvE encounters.</p>
             </div>
             <div className={styles.feature}>
-              <h3>👁️ Always-on-top Overlay</h3>
+              <h3>Always-on-top Overlay</h3>
               <p>Transparent overlay interface that stays visible during gameplay without interruption.</p>
             </div>
             <div className={styles.feature}>
-              <h3>🚀 Game Process Detection</h3>
+              <h3>Game Process Detection</h3>
               <p>Automatically starts monitoring when Star Citizen is running - no manual activation needed.</p>
             </div>
             <div className={styles.feature}>
-              <h3>🔄 Automatic Updates</h3>
+              <h3>Automatic Updates</h3>
               <p>Built-in update system keeps you current with the latest features and improvements.</p>
             </div>
             <div className={styles.feature}>
-              <h3>⚡ Lightweight & Fast</h3>
+              <h3>Lightweight & Fast</h3>
               <p>Minimal system impact with approximately 60MB disk space requirement.</p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ />
+
+      {/* Troubleshooting Section */}
+      <Troubleshooting />
 
       {/* Contact Section */}
       <section id="contact" className={styles.contact}>
