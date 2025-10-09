@@ -63,10 +63,14 @@ export default function Home() {
               <p className={styles.requirements}>Windows 10/11 • ~60MB • Free</p>
             </div>
             <div className={styles.heroImage}>
-              <div className={styles.screenshot}>
-                <p>App Screenshot</p>
-                <small>(Screenshot placeholder - add your Logi overlay image)</small>
-              </div>
+              <Image
+                src="/app_sshot_01.jpg"
+                alt="Logi overlay interface showing kill tracking in Star Citizen"
+                width={600}
+                height={400}
+                className={styles.screenshot}
+                priority
+              />
             </div>
           </div>
         </div>

@@ -19,6 +19,10 @@
     --bg-light: #1a1a1a;
     --border-color: #333;
   }
+  
+  .screenshot {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
 }
 
 /* Container for consistent width */
@@ -83,7 +87,10 @@
 /* Hero Section */
 .hero {
   padding: 4rem 0;
-  background: var(--bg-light);
+  background-image: url('/Section1_bg_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .heroContent {
@@ -158,29 +165,12 @@
 }
 
 .screenshot {
-  background: var(--border-color);
   border-radius: 12px;
-  padding: 3rem 2rem;
-  text-align: center;
-  color: var(--secondary-color);
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 400px;
-}
-
-.screenshot p {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.screenshot small {
-  font-size: 0.85rem;
-  opacity: 0.7;
+  height: auto;
+  max-width: 500px;
+  border: 2px solid var(--border-color);
 }
 
 /* Features Section */
