@@ -1,7 +1,14 @@
+"use client";
+
 import Image from "next/image";
+import { useLatestRelease } from "@/hooks/useLatestRelease";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const { version, downloadUrl, isLoading } = useLatestRelease({
+    owner: "OMTut",
+    repo: "Logi",
+  });
   return (
     <div className={styles.page}>
       {/* Header */}
@@ -37,12 +44,12 @@ export default function Home() {
               </p>
               <div className={styles.heroButtons}>
                 <a 
-                  href="https://github.com/OMTut/Logi/releases/latest/download/LogiSetup.exe"
+                  href={downloadUrl}
                   className={styles.downloadBtn}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Download v1.0.1
+                  {isLoading ? "Loading..." : `Download ${version}`}
                 </a>
                 <a 
                   href="https://github.com/OMTut/Logi/releases"
