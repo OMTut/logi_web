@@ -6,6 +6,10 @@ const faqData = [
     content: "<p>Frankly, I need something to show potential employers CS skills, and this is a fun way to do it. Plus, I rarely press charges in SC so I don't look at the pop up. This let's me see who kilt me.</p>"
   },
   {
+    title: "Is Logi persistent or have a backend?",
+    content: "<p>No. You're not connected to anything. In the future, yes. I'll spin up and work on a proper database for it.</p>"
+  },
+  {
     title: "How does Logi work with Star Citizen?",
     content: "<p>Logi monitors your Star Citizen log files in real-time to detect and display combat events. It automatically starts when Star Citizen is running and provides an always-on-top overlay that won't interfere with your gameplay.</p>"
   },
