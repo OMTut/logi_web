@@ -94,7 +94,7 @@ export default function Home() {
               <p>Monitor and display actor death events in real-time during PvP and PvE encounters.</p>
             </div>
             <div className={styles.feature}>
-              <h3>Always-on-top Overlay</h3>
+              <h3>Mostly-on-top Overlay</h3>
               <p>Transparent overlay interface that stays visible during gameplay without interruption.</p>
             </div>
             <div className={styles.feature}>
