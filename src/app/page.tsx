@@ -6,11 +6,29 @@ import FAQ from "@/components/FAQ";
 import Troubleshooting from "@/components/Troubleshooting";
 import styles from "./page.module.css";
 
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 export default function Home() {
   const { version, downloadUrl, isLoading } = useLatestRelease({
     owner: "OMTut",
     repo: "Logi",
   });
+
+  const trackDownload = () => {
+    // Track download in Google Analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'download', {
+        event_category: 'Logi App',
+        event_label: version,
+        value: 1
+      });
+    }
+  };
   return (
     <div className={styles.page}>
       {/* Header */}
@@ -52,6 +70,7 @@ export default function Home() {
                   className={styles.downloadBtn}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={trackDownload}
                 >
                   {isLoading ? "Loading..." : `Download ${version}`}
                 </a>
