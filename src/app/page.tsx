@@ -61,8 +61,8 @@ export default function Home() {
             <div className={styles.heroText}>
               <h2>Real-time Kill Tracker for Star Citizen</h2>
               <p>
-                Monitor PvP and PvE combat events with Logi's always-on-top overlay. 
-                Track actor deaths, combat statistics, and enhance your Star Citizen gameplay experience.
+                Monitor PvP and PvE combat events with Logi's "mostly-on-top" overlay. 
+                Track actor deaths and see who got you or who you got.
               </p>
               <div className={styles.heroButtons}>
                 <a 
