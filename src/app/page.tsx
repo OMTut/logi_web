@@ -59,7 +59,13 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <h2>Real-time Kill Tracker for Star Citizen</h2>
+              <h2>Discontinued Real-time Kill Tracker for Star Citizen</h2>
+              <p>
+                Due to a change in the way CIG handles their log files,
+                this app is no longer functional. I am leaving it hear for
+                job-hunting purposes. Again, this app no longer serves its
+                intended purpose.
+              </p>
               <p>
                 Monitor PvP and PvE combat events with Logi's "mostly-on-top" overlay. 
                 Track actor deaths and see who got you or who you got.
